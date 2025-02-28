@@ -1,0 +1,35 @@
+1. https://www.geeksforgeeks.org/spring-difference-between-beanfactory-and-applicationcontext/
+
+2. Different scopes of a Spring bean are:
+Singleton: One single bean instance per Spring IoC container. 
+
+Prototype: A new bean instance is created each time the bean is requested. 
+
+Request: A single bean per HTTP/HTTPS request, applicable in web applications. 
+
+Session: A single bean instance per HTTP/HTTPS session. 
+
+Global Session: A single bean instance per HTTP/HTTPS global session, used in portlet applications. 
+
+Application: A single bean per lifecycle of a ServletContext. 
+
+These scopes define the lifecycle and visibility of beans in the Spring Framework. 
+
+
+3. https://www.geeksforgeeks.org/hibernate-eager-lazy-loading/
+4. Key Stages of the Bean Life Cycle
+
+Instantiation: The Spring container creates an instance of the bean.
+
+Dependency Injection: The container injects dependencies into the bean.
+
+Initialization: Custom initialization logic can be executed.
+
+Usage: The bean is ready for use by the application.
+
+Destruction: Custom destruction logic can be executed before the bean is removed from the container.
+
+XML- init() , destroy()
+interfaces- InitializingBean and DisposableBean (classes)
+        |--- afterPropertiesSet(), destroy()  (methods)
+Annotations -- @PreConstruct,@PostConstruct
